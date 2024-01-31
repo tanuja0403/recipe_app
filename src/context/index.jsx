@@ -23,6 +23,7 @@ export default function GlobalState({ children }) {
     } catch (error) {
       console.log(error);
     } finally {
+      setSearchParam("");
       setLoading(false);
     }
   }
