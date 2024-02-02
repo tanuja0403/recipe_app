@@ -1,4 +1,5 @@
 import { createContext, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export const GlobalContext = createContext(null);
 
@@ -8,6 +9,8 @@ export default function GlobalState({ children }) {
   const [recipeList, setRecipeList] = useState([]);
   const [recipeItem, setRecipeItem] = useState({});
   const [favoriteList, setFavoriteList] = useState([]);
+
+  const navigate = useNavigate();
 
   // const api = import.meta.env.VITE_FORKIFY_API;
 
@@ -26,6 +29,7 @@ export default function GlobalState({ children }) {
       console.log(error);
     } finally {
       setSearchParam("");
+      navigate("/");
       setLoading(false);
     }
   }

@@ -50,9 +50,9 @@ export default function Details() {
         >
           {favoriteList &&
           favoriteList.length > 0 &&
-          favoriteList.findIndex((item) => item.id === recipeItem.id) === -1
-            ? "Add to Favorite"
-            : "Remove from Favorite"}
+          favoriteList.findIndex((item) => item.id === recipeItem.id) !== -1
+            ? "Remove from Favorite"
+            : "Add to Favorite"}
         </button>
         <h3 className="text-black text-2xl font-semibold mt-3">Ingredients:</h3>
         <ul>
