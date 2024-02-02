@@ -7,6 +7,7 @@ export default function GlobalState({ children }) {
   const [loading, setLoading] = useState(false);
   const [recipeList, setRecipeList] = useState([]);
   const [recipeItem, setRecipeItem] = useState({});
+  const [favoriteList, setFavoriteList] = useState([]);
 
   // const api = import.meta.env.VITE_FORKIFY_API;
 
@@ -29,6 +30,21 @@ export default function GlobalState({ children }) {
     }
   }
 
+  function handleFavorites(getCurrentRecipe) {
+    const cpyFavorites = [...favoriteList];
+    const index = cpyFavorites.findIndex(
+      (item) => item.id === getCurrentRecipe.id
+    );
+    if (index === -1) {
+      cpyFavorites.push(getCurrentRecipe);
+    } else {
+      cpyFavorites.splice(index);
+    }
+    setFavoriteList(cpyFavorites);
+  }
+
+  console.log(favoriteList);
+
   return (
     <GlobalContext.Provider
       value={{
@@ -39,6 +55,8 @@ export default function GlobalState({ children }) {
         recipeList,
         recipeItem,
         setRecipeItem,
+        handleFavorites,
+        favoriteList,
       }}
     >
       {children}
