@@ -1,8 +1,47 @@
-# React + Vite
+# Food Recipe Website - [Visit Now](https://flavor-fusion-recipe.netlify.app/)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple React application for a food recipe website. Users can browse various recipes, view ingredients, and save their favorite dishes.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Browse Recipes
+
+1. Visit the homepage to see a search for the desired recipe.
+2. Click on a recipe to view details, including ingredients.
+
+### Save Favorite Dishes
+
+1. Click on the "Add to Favorite" button in the recipe details page.
+2. Saved recipes can be accessed later from the "Favorites" page.
+
+## Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/Abhijitkr/Food-Recipe.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd Food-Recipe
+   ```
+
+3. Install dependencies using npm:
+
+   ```bash
+   npm install
+   ```
+
+4. Don't forget add environment variable file, example provided in the root of the repository (.env.example)
+
+## Usage
+
+1. Start the deployment server
+
+   ```bash
+   npm run dev
+   ```
+
+2. Open your browser and go to http://localhost:5173
