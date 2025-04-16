@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Food Recipe Website - [Visit Now](https://flavor-fusion-recipe.netlify.app/)
 
 This is a simple React application for a food recipe website. Users can browse various recipes, view ingredients, and save their favorite dishes.
@@ -45,3 +46,6 @@ This is a simple React application for a food recipe website. Users can browse v
    ```
 
 2. Open your browser and go to http://localhost:5173
+=======
+# recipe_app
+>>>>>>> 9ff12b86caa2753f34b5ee11409bd6f7b3594539
